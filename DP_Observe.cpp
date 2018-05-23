@@ -77,5 +77,9 @@ int main(int argc, char argv[])
 	concreteSub->Attach(observer_A);
 	concreteSub->Attach(observer_B);
 	concreteSub->Notify();
+
+	delete observer_B;
+	delete observer_A;
+	delete concreteSub;
 	return 0;
 }
