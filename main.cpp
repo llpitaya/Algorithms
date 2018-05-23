@@ -10,5 +10,8 @@ int main()
 	//cout << que[0] << endl;
 	int x = -1;
 	cout << hex << (x>>1) << endl;
+	unsigned char dst = 128;
+	unsigned char src = 179;
+	cout << ((dst)&(~src)) << endl;
 	return 0;
 }

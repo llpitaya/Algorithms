@@ -17,7 +17,7 @@
     <ClInclude Include="__malloc_alloc_template.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CalculateOneNumber.cpp" />
+    <ClCompile Include="DP_Observe.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0F5FCDA9-2877-417B-B547-446E6E9AD74E}</ProjectGuid>
