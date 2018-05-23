@@ -8,7 +8,7 @@ int main()
 	//_deque < int, malloc_alloc, 8 > que(20,8);
 	//que[0] = 10;
 	//cout << que[0] << endl;
-	unsigned int  m = ( 15- 127) << 23;
-	cout << hex << m << endl;
+	int x = -1;
+	cout << hex << (x>>1) << endl;
 	return 0;
 }
