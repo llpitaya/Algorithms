@@ -11,13 +11,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="_deque.h" />
-    <ClInclude Include="simple_alloc.h" />
-    <ClInclude Include="__deque_iterator.h" />
-    <ClInclude Include="__malloc_alloc_template.h" />
+    <ClCompile Include="AnalogClock.cpp" />
+    <ClCompile Include="ClockTimer.cpp" />
+    <ClCompile Include="DigitialClock.cpp" />
+    <ClCompile Include="DP_Observe.cpp" />
+    <ClCompile Include="Subject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DP_Observe.cpp" />
+    <ClInclude Include="AnalogClock.h" />
+    <ClInclude Include="ClockTimer.h" />
+    <ClInclude Include="DigitialClock.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Subject.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{0F5FCDA9-2877-417B-B547-446E6E9AD74E}</ProjectGuid>
