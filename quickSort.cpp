@@ -1,22 +1,31 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-int GetPivot(int array[], int left, int right)
+int Partition(int data[], int start, int end)
 {
-	int pivot = left;
-	
-	while (left<right)
+	if (start == end || data == nullptr)
 	{
-		int pivotValue = array[pivot];
-		while (array[right] >= pivotValue)
-			--right;
-		swap(array[right], pivotValue);
-		while (array[left] <=pivotValue)
-			++left;
-		swap(array[left], pivotValue);
-		pivot = left;
+		return start;
 	}
-	return pivot;
+	int pivotVal = data[start];
+	int midIndex = start;
+	while (start<end)
+	{
+		while (end>start && data[end] >= pivotVal)
+		{
+			--end;
+		}
+		swap(data[end], data[midIndex]);
+		midIndex = end;
+		while (start<end && data[start] < pivotVal)
+		{
+			++start;
+		}
+		swap(data[start], data[midIndex]);
+		midIndex = start;
+	}
+
+	return midIndex;
 }
 void QuickSort(int array[], int left, int right)
 {
@@ -24,7 +33,7 @@ void QuickSort(int array[], int left, int right)
 	{
 		return;
 	}
-	int pivotIdx = GetPivot(array, left, right);
+	int pivotIdx = Partition(array, left, right);
 	QuickSort(array, left, pivotIdx);
 	QuickSort(array, pivotIdx + 1, right);
 
@@ -33,8 +42,11 @@ void QuickSort(int array[], int left, int right)
 
 int main()
 {
-	int a[] = { 4,5,4,100,-2,4,34};
+	int a[] = {0,1,2,3 };
 	QuickSort(a, 0, sizeof(a)/sizeof(int) - 1);
-
+	for (auto x : a)
+	{
+		cout << x << " ";
+	}
 	return 0;
 }
